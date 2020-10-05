@@ -1,9 +1,19 @@
 import React from "react";
+import { Provider } from "react-redux";
+
+import store from "./store";
+
+// COMPONENTS
+import Sidebar from "./components/Sidebar";
+import Video from "./components/Video";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Genesis systems</h1>
+      <Provider store={store}>
+        <Video />
+        <Sidebar />
+      </Provider>
     </div>
   );
 };
